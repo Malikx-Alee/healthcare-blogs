@@ -3,6 +3,7 @@ title: "Article 3"
 date: "2019-04-18"
 category: "Covid"
 type: "articles"
+author: "Bilal Mubeen"
 ---
 
 Hello, world! This is a my third article.

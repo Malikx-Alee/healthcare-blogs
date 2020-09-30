@@ -3,6 +3,7 @@ title: "Article 1"
 date: "2019-04-16"
 category: "Covid"
 type: "articles"
+author: "Ali Haider"
 ---
 
 Hello, world! This is a my first article.

@@ -21,7 +21,12 @@ export default function BlogPost({ data }) {
   const classesChip = useStylesChip()
   const post = data.markdownRemark
   return (
-    <Layout>
+    <Layout
+      title={
+        post.frontmatter.type === "news" ? "Health News" : "Health Articles"
+      }
+      redirectTo={post.frontmatter.type}
+    >
       <Helmet>
         <meta charSet="utf-8" />
         <title>{post.frontmatter.title} | EZDOC</title>
@@ -48,6 +53,7 @@ export const query = graphql`
       frontmatter {
         title
         category
+        type
       }
     }
   }

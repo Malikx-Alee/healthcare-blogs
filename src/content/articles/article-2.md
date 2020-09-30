@@ -3,6 +3,7 @@ title: "Article 2"
 date: "2019-04-17"
 category: "Covid"
 type: "articles"
+author: "Amer Sohail"
 ---
 
 Hello, world! This is a my second article.

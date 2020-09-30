@@ -3,6 +3,7 @@ title: "Sweet Pandas Eating Sweets"
 date: "2017-08-10"
 category: "Test"
 type: "articles"
+author: "James Vince"
 ---
 
 Pandas are really sweet.

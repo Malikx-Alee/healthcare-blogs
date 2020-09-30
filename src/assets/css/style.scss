@@ -366,6 +366,23 @@ Version      : 1.2
 /*-----------------
 	2. Health News
 -----------------------*/
+
+.news-card {
+  border: 0px;
+  border-radius: 1rem;
+  padding: 16px;
+  margin: 10px 0px;
+}
+
+.news-flex {
+  flex-basis: 40%;
+  height: inherit;
+}
+.news-details-flex {
+  flex-basis: 60%;
+  padding: 0px 1rem;
+}
+
 .home-news-div {
   overflow: hidden;
 }
@@ -391,14 +408,12 @@ Version      : 1.2
 }
 
 .news-widget-img-div {
-  width: 112px;
-  height: 112px;
+  height: 250px;
   overflow: hidden;
   border-radius: 8px;
-  position: relative;
 }
 .news-widget-img-div > img {
-  // object-fit: cover;
+  object-fit: cover;
   max-width: 100%;
   height: inherit;
 }
@@ -425,4 +440,46 @@ a.news-link {
 a.news-link:hover {
   color: #007780;
   text-decoration: underline;
+}
+
+.news-excerpt {
+  display: block;
+}
+
+/******* Responsive ************/
+
+@media only screen and (max-width: 768px) {
+  .news-layout {
+    top: 60px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .news-card {
+    border: 0px;
+    border-radius: 1rem;
+    padding: 8px;
+    margin: 10px 0px;
+  }
+
+  .news-excerpt {
+    display: none;
+  }
+
+  .news-widget-img-div {
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+
+  .news-flex {
+    flex-basis: 30%;
+    height: inherit;
+  }
+  .news-details-flex {
+    flex-basis: 70%;
+  }
 }
