@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
+import { Helmet } from "react-helmet"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -21,6 +22,10 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>{post.frontmatter.title} | EZDOC</title>
+      </Helmet>
       <div>
         <h3 className="primary-color mb-2">{post.frontmatter.title}</h3>
         <div className="pb-1">

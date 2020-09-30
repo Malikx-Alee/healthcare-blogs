@@ -2,6 +2,7 @@
 title: "Hello World"
 date: "2019-04-15"
 category: "Covid"
+type: "news"
 ---
 
 Hello, world! This is a demo post for `gatsby-theme-blog`.

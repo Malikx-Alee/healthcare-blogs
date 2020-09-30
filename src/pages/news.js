@@ -7,7 +7,7 @@ import NewsWidget from "../components/HealthNews/NewsWidget"
 
 export default function Home({ data }) {
   return (
-    <Layout title="Articles And News">
+    <Layout title="Health News">
       <div>
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -22,7 +22,10 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "news" } } }
+    ) {
       totalCount
       edges {
         node {

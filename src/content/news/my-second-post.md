@@ -2,6 +2,7 @@
 title: "My Second Post!"
 date: "2019-05-15"
 category: "Covid"
+type: "news"
 ---
 
 Wow! I love blogging so much already.

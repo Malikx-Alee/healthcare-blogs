@@ -38,7 +38,7 @@ export default function Home({ data }) {
                   alt="news"
                   // src={`${process.env.REACT_APP_IMG_RESOURCE_URL}${i.pictureURL}`}
                   src="https://demo.tagdiv.com/newspaper_covid19_news_pro/wp-content/uploads/2020/03/9-1068x601.jpg"
-                  width="inherit"
+                  width="100%"
                   className="health-news-img"
                 />
               </div>
@@ -75,6 +75,7 @@ export default function Home({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
+      filter: { frontmatter: { type: { eq: "news" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 3
     ) {
@@ -86,6 +87,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             category
+            type
           }
           fields {
             slug
