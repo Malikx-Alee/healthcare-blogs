@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Health News EZDOC`,
+    siteURL: "https://healthcareappointmentblog.herokuapp.com",
   },
   plugins: [
     {
