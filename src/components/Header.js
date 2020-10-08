@@ -61,20 +61,20 @@ export default function HeaderMenuAppBar(props) {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="http://ezdoc.pk">
+                <Nav.Link href="https://ezdoc.pk">
                   <p className="header-new-nav primary-color">HOME </p>
                 </Nav.Link>
-                <Nav.Link href="http://ezdoc.pk/registerphysician">
+                <Nav.Link href="https://ezdoc.pk/registerphysician">
                   <p className="header-new-nav">REGISTER PHYSICIAN </p>
                 </Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link href="http://ezdoc.pk/register">
+                <Nav.Link href="https://ezdoc.pk/register">
                   <p className="header-login-signup"> SIGN UP </p>
                 </Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link href="http://ezdoc.pk/login">
+                <Nav.Link href="https://ezdoc.pk/login">
                   <p className="header-login-signup"> SIGN IN </p>
                 </Nav.Link>
               </Nav>

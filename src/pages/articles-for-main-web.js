@@ -61,7 +61,11 @@ export default function Home({ data }) {
         <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
           <div className="row home-more-news-div">
             <div className="col-12 align-self-center justify-content-center text-center">
-              <a href="http://localhost:8000/" target="_blank" rel="noreferrer">
+              <a
+                href="https://healthcareappointmentblog.herokuapp.com/articles"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <h3 className="primary-color">View More</h3>
               </a>
             </div>
