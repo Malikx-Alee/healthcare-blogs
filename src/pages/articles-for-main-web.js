@@ -67,8 +67,6 @@ export default function Home({ data }) {
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   )

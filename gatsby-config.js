@@ -8,13 +8,21 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Health News EZDOC`,
+    siteURL: "https://healthcareappointmentblog.herokuapp.com",
   },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
+        name: `content`,
         path: `${__dirname}/src/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
     },
     `gatsby-transformer-remark`,
