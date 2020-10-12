@@ -29,6 +29,7 @@ export default function BlogPost({ data }) {
     >
       <Helmet>
         <meta charSet="utf-8" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
         <title>{post.frontmatter.title} | EZDOC</title>
       </Helmet>
       <div>
