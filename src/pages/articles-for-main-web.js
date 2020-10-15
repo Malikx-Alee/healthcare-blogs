@@ -58,10 +58,14 @@ export default function Home({ data }) {
             </Link>
           </div>
         ))}
-		<div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
+        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
           <div className="row home-more-news-div">
             <div className="col-12 align-self-center justify-content-center text-center">
-              <a href="https://blogs.ezdoc.pk/" target="_blank" rel="noreferrer">
+              <a
+                href="https://blogs.ezdoc.pk/articles/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <h3 className="primary-color">View More</h3>
               </a>
             </div>
