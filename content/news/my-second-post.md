@@ -3,6 +3,7 @@ title: "My Second Post!"
 date: "2019-05-15"
 category: "Covid"
 type: "news"
+featuredImage: "../assets/avatar.jpg"
 ---
 
 Wow! I love blogging so much already.

@@ -35,7 +35,7 @@ export default function Home({ data }) {
               to={node?.fields?.slug}
             >
               <div>
-                <Img fluid={node?.frontmatter?.featuredImage} />
+                <Img fluid={node?.frontmatter?.featuredImage.childImageSharp.fluid} />
                 {/* <img
                   alt="news"
                   // src={`${process.env.REACT_APP_IMG_RESOURCE_URL}${i.pictureURL}`}
