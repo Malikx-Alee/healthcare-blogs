@@ -34,7 +34,7 @@ export default function Home({ data }) {
               className="news-link"
               to={node?.fields?.slug}
             >
-              <div>
+              <div className="health-news-img">
                 <Img fluid={node?.frontmatter?.featuredImage.childImageSharp.fluid} />
                 {/* <img
                   alt="news"
@@ -96,7 +96,7 @@ export const query = graphql`
             type
             featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 400,maxHeight: 200) {
                   ...GatsbyImageSharpFluid
                 }
               }

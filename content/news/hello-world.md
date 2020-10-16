@@ -3,7 +3,7 @@ title: "WHO vaccination recommendation for Influenza"
 date: "2020-10-17"
 category: "Influenza"
 type: "news"
-featuredImage: "../assets/avatar.jpg"
+featuredImage: "../assets/who_flu_recommendations.png"
 ---
 
 Vaccination is the most effective way to prevent infection and severe outcomes caused by influenza viruses.
