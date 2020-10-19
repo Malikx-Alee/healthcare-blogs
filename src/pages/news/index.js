@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../assets/css/style.scss"
-import NewsWidget from "../components/HealthNews/NewsWidget"
+import "../../assets/css/style.scss"
+import NewsWidget from "../../components/HealthNews/NewsWidget"
 
 export default function Home({ data }) {
   return (
@@ -34,7 +34,13 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             category
-            featuredImage
+            featureImage {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
           fields {
             slug

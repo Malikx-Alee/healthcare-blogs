@@ -3,6 +3,7 @@ import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -23,10 +24,15 @@ function NewsWidget(props) {
         <div className="d-flex flex-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
-              <img
+              {/* <img
                 alt="News"
-                // src={`../../../content/avatar.jpg`}
-                src={props.news?.frontmatter?.featuredImage}
+                src={"/assets/" + props.news?.frontmatter?.featuredImage}
+              /> */}
+              <Img
+                fluid={
+                  props.news?.frontmatter?.featureImage.childImageSharp.fluid
+                }
+                objectFit="cover"
               />
             </div>
           </div>

@@ -447,6 +447,10 @@ a.news-link:hover {
   display: block;
 }
 
+.gatsby-image-wrapper {
+  height: inherit;
+}
+
 /******* Responsive ************/
 
 @media only screen and (max-width: 768px) {

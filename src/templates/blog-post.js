@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
 import { Helmet } from "react-helmet"
+import Img from "gatsby-image"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -47,6 +48,10 @@ export default function BlogPost({ data }) {
             label={post?.frontmatter?.category}
           />
         </div>
+        <br />
+        {/* <img src={"/assets/" + post.frontmatter.featuredImage} /> */}
+        <Img fluid={post?.frontmatter?.featureImage.childImageSharp.fluid} />
+        <br />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
@@ -61,7 +66,13 @@ export const query = graphql`
         title
         category
         type
-        featuredImage
+        featureImage {
+          childImageSharp {
+            fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
       excerpt
     }
