@@ -29,7 +29,13 @@ export default function BlogPost({ data }) {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
+        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:image" content={post.frontmatter.featuredImage} />
+        <meta property="og:description" content={post.excerpt} />
         <title>{post.frontmatter.title} | EZDOC</title>
       </Helmet>
       <div>
@@ -55,7 +61,9 @@ export const query = graphql`
         title
         category
         type
+        featuredImage
       }
+      excerpt
     }
   }
 `

@@ -26,7 +26,7 @@ function NewsWidget(props) {
               <img
                 alt="News"
                 // src={`../../../content/avatar.jpg`}
-                src="https://demo.tagdiv.com/newspaper_covid19_news_pro/wp-content/uploads/2020/03/9-1068x601.jpg"
+                src={props.news?.frontmatter?.featuredImage}
               />
             </div>
           </div>
