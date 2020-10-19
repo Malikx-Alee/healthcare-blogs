@@ -3,7 +3,7 @@ title: "FDA Approves First Treatment for Ebola Virus"
 date: "2019-10-15"
 category: "Ebola"
 type: "news"
-featureImage: 1920px-Ebola_virus_virion.jpg
+featureImage: ./1920px-Ebola_virus_virion.jpg
 ---
 
 The U.S. Food and Drug Administration has approved Inmazeb (atoltivimab, maftivimab, and odesivimab-ebgn), a mixture of three monoclonal antibodies, as the first FDA-approved treatment for Zaire ebolavirus (Ebola virus) infection in adult and pediatric patients.

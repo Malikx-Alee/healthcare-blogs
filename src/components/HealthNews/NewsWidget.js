@@ -24,12 +24,15 @@ function NewsWidget(props) {
         <div className="d-flex flex-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
-              <Img
-                fluid={
-                  props.news?.frontmatter?.featureImage?.childImageSharp.fluid
-                }
-                objectFit="cover"
-              />
+              {props.news.frontmatter && (
+                <Img
+                  fluid={
+                    props.news?.frontmatter?.featureImage?.childImageSharp
+                      ?.fluid
+                  }
+                  objectFit="cover"
+                />
+              )}
             </div>
           </div>
           <div className="news-details-flex px-4">

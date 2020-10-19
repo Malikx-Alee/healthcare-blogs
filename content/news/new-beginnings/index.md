@@ -3,7 +3,7 @@ title: "New Beginnings"
 date: "2019-05-29"
 category: "Covid"
 type: "news"
-featureImage: 5f8ad0f8912e2.jpg
+featureImage: ./5f8ad0f8912e2.jpg
 ---
 
 Far far away, behind the word mountains, far from the countries Vokalia and

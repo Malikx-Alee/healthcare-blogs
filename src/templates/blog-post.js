@@ -49,8 +49,11 @@ export default function BlogPost({ data }) {
           />
         </div>
         <br />
-        {/* <img src={"/assets/" + post.frontmatter.featuredImage} /> */}
-        <Img fluid={post?.frontmatter?.featureImage.childImageSharp.fluid} />
+        {post.frontmatter && (
+          <Img
+            fluid={post?.frontmatter?.featureImage?.childImageSharp?.fluid}
+          />
+        )}
         <br />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
