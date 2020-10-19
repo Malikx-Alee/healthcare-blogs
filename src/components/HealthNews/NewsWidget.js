@@ -24,13 +24,9 @@ function NewsWidget(props) {
         <div className="d-flex flex-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
-              {/* <img
-                alt="News"
-                src={"/assets/" + props.news?.frontmatter?.featuredImage}
-              /> */}
               <Img
                 fluid={
-                  props.news?.frontmatter?.featureImage.childImageSharp.fluid
+                  props.news?.frontmatter?.featureImage?.childImageSharp.fluid
                 }
                 objectFit="cover"
               />
