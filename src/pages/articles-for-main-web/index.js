@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/style.scss"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
+import Img from "gatsby-image"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -34,13 +35,21 @@ export default function Home({ data }) {
               to={node?.fields?.slug}
             >
               <div>
-                <img
+                {/* <img
                   alt="news"
                   // src={`${process.env.REACT_APP_IMG_RESOURCE_URL}${i.pictureURL}`}
                   src="https://demo.tagdiv.com/newspaper_covid19_news_pro/wp-content/uploads/2020/03/9-1068x601.jpg"
                   width="100%"
                   className="health-news-img"
-                />
+                /> */}
+                {node.frontmatter && (
+                  <Img
+                    className="health-news-img"
+                    fluid={
+                      node?.frontmatter?.featureImage?.childImageSharp?.fluid
+                    }
+                  />
+                )}
               </div>
               <div>
                 <Chip
@@ -92,6 +101,13 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             category
             type
+            featureImage {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
           fields {
             slug

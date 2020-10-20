@@ -399,7 +399,7 @@ Version      : 1.2
 }
 
 .health-news-img {
-  height: 200px;
+  height: 200px !important;
   // object-fit: contain;
   max-width: 100%;
 }
