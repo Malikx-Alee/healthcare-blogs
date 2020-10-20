@@ -35,14 +35,14 @@ export default function Home({ data }) {
               to={node?.fields?.slug}
             >
               <div className="health-news-img">
-                <Img fluid={node?.frontmatter?.featuredImage.childImageSharp.fluid} />
-                {/* <img
+                
+                 <img
                   alt="news"
                   // src={`${process.env.REACT_APP_IMG_RESOURCE_URL}${i.pictureURL}`}
                   src="https://demo.tagdiv.com/newspaper_covid19_news_pro/wp-content/uploads/2020/03/9-1068x601.jpg"
                   width="100%"
                   className="health-news-img"
-                /> */}
+                /> 
               </div>
               <div>
                 <Chip
@@ -94,13 +94,6 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             category
             type
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 400,maxHeight: 200) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
           }
           fields {
             slug
