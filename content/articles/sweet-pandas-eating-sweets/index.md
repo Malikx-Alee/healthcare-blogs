@@ -4,6 +4,7 @@ date: "2017-08-10"
 category: "Test"
 type: "articles"
 author: "James Vince"
+featureImage: "health-issues-memo-written-on-260nw-1177819987.png"
 ---
 
 Pandas are really sweet.

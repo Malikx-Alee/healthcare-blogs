@@ -34,10 +34,13 @@ export default function BlogPost({ data }) {
           http-equiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         />
-        <meta property="og:title" content={post.frontmatter.title} />
-        <meta property="og:image" content={post.frontmatter.featuredImage} />
-        <meta property="og:description" content={post.excerpt} />
         <title>{post.frontmatter.title} | EZDOC</title>
+        <meta property="og:title" content={post?.frontmatter?.title} />
+        <meta
+          property="og:image"
+          content={post.frontmatter?.featuredImage?.fluid?.src}
+        />
+        <meta property="og:description" content={post.excerpt} />
       </Helmet>
       <div>
         <h3 className="primary-color mb-2">{post.frontmatter.title}</h3>
@@ -72,7 +75,7 @@ export const query = graphql`
         featureImage {
           childImageSharp {
             fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
-              ...GatsbyImageSharpFluid_tracedSVG
+              ...GatsbyImageSharpFluid
             }
           }
         }

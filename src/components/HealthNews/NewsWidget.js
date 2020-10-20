@@ -21,7 +21,7 @@ function NewsWidget(props) {
   return (
     <div className="card news-card">
       <Link className="news-link" to={props.news?.fields?.slug}>
-        <div className="d-flex flex-row">
+        <div className="d-flex flex-column flex-md-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
               {props.news.frontmatter && (
@@ -35,7 +35,7 @@ function NewsWidget(props) {
               )}
             </div>
           </div>
-          <div className="news-details-flex px-4">
+          <div className="news-details-flex px-1 px-md-4">
             <div className="pb-1">
               <Chip
                 className={clsx(classesChip.root, "mt-2")}
