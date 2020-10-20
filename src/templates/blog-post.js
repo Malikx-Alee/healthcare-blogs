@@ -34,7 +34,7 @@ export default function BlogPost({ data }) {
           http-equiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         />
-        <meta property="og:title" content={post.frontmatter.title} />
+        <meta property="og:title" content={post?.frontmatter?.title} />
         <meta
           property="og:image"
           content={post.frontmatter?.featuredImage?.fluid?.src}
