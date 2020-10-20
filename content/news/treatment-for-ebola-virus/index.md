@@ -1,7 +1,7 @@
 ---
 title: "FDA Approves First Treatment for Ebola Virus"
 date: "2019-10-15"
-category: "Ebola"
+category: "EBOLA"
 type: "news"
 featureImage: ./1920px-Ebola_virus_virion.jpg
 ---

@@ -46,6 +46,13 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             category
+            featureImage {
+              childImageSharp {
+                fluid(maxWidth: 400, maxHeight: 200) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug
