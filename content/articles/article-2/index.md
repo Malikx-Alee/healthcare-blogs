@@ -4,6 +4,7 @@ date: "2019-04-17"
 category: "Covid"
 type: "articles"
 author: "Amer Sohail"
+featureImage: "health-issues-memo-written-on-260nw-1177819987.png"
 ---
 
 Hello, world! This is a my second article.

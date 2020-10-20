@@ -1,13 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../../components/layout"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../assets/css/style.scss"
-import ArticlesWidget from "../components/HealthNews/ArticlesWidget"
+import "../../assets/css/style.scss"
+import ArticlesWidget from "../../components/HealthNews/ArticlesWidget"
 
 export default function Home({ data }) {
   return (
-    <Layout title="Health Articles">
+    <Layout title="Health News">
       <div>
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -23,8 +23,8 @@ export default function Home({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "articles" } } }
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { type: { eq: "articles" } } }
     ) {
       totalCount
       edges {
@@ -35,6 +35,13 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             category
             author
+            featureImage {
+              childImageSharp {
+                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
           fields {
             slug

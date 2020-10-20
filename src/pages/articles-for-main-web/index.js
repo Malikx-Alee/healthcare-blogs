@@ -2,7 +2,7 @@ import React from "react"
 import clsx from "clsx"
 import { graphql, Link } from "gatsby"
 import "bootstrap/dist/css/bootstrap.min.css"
-import "../assets/css/style.scss"
+import "../../assets/css/style.scss"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
 
@@ -62,7 +62,7 @@ export default function Home({ data }) {
           <div className="row home-more-news-div">
             <div className="col-12 align-self-center justify-content-center text-center">
               <a
-                href="https://blogs.ezdoc.pk/news/"
+                href="https://blogs.ezdoc.pk/articles/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -79,7 +79,7 @@ export default function Home({ data }) {
 export const query = graphql`
   query {
     allMarkdownRemark(
-      filter: { frontmatter: { type: { eq: "news" } } }
+      filter: { frontmatter: { type: { eq: "articles" } } }
       sort: { fields: [frontmatter___date], order: DESC }
       limit: 3
     ) {
