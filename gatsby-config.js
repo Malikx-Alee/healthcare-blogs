@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Health News EZDOC`,
     siteURL: "https://healthcareappointmentblog.herokuapp.com",
+    image: "/logo192.png",
   },
   plugins: [
     {
@@ -28,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/content/assets`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
     },
     {
@@ -39,12 +40,26 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-image`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-material-ui`,
-    `gatsby-plugin-mdx`,
   ],
 }

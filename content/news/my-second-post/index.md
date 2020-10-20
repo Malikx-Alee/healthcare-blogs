@@ -3,7 +3,7 @@ title: "My Second Post!"
 date: "2019-05-15"
 category: "Covid"
 type: "news"
-featuredImage: "../assets/avatar.jpg"
+featureImage: ./1920px-Ebola_virus_virion.jpg
 ---
 
 Wow! I love blogging so much already.
