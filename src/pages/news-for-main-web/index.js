@@ -101,10 +101,10 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             category
             type
-            featureImage {
+            featuredImage {
               childImageSharp {
-                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                fluid(maxWidth: 400,maxHeight: 200) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
