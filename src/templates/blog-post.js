@@ -37,7 +37,7 @@ export default function BlogPost({ data }) {
         <meta property="og:title" content={post.frontmatter.title} />
         <meta
           property="og:image"
-          content={post.frontmatter.featuredImage.fluid.src}
+          content={post.frontmatter?.featuredImage?.fluid?.src}
         />
         <meta property="og:description" content={post.excerpt} />
         <title>{post.frontmatter.title} | EZDOC</title>
