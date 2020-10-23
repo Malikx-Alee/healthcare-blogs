@@ -35,12 +35,22 @@ export default function BlogPost({ data }) {
           content="upgrade-insecure-requests"
         />
         <title>{post.frontmatter.title} | EZDOC</title>
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={post?.frontmatter?.title} />
         <meta
           property="og:image"
           content={post.frontmatter?.featuredImage?.fluid?.src}
         />
         <meta property="og:description" content={post.excerpt} />
+
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post?.frontmatter?.title} />
+        <meta name="twitter:description" content={post.excerpt} />
+        <meta
+          name="twitter:image"
+          content={post.frontmatter?.featuredImage?.fluid?.src}
+        />
       </Helmet>
       <div>
         <h3 className="primary-color mb-2">{post.frontmatter.title}</h3>
