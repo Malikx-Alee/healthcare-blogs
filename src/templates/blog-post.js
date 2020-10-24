@@ -4,8 +4,8 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
-import { Helmet } from "react-helmet"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -28,30 +28,12 @@ export default function BlogPost({ data }) {
       }
       redirectTo={post.frontmatter.type}
     >
-      <Helmet>
-        <meta charSet="utf-8" />
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-        <title>{post.frontmatter.title} | EZDOC</title>
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={post?.frontmatter?.title} />
-        <meta
-          property="og:image"
-          content={post.frontmatter?.featuredImage?.fluid?.src}
-        />
-        <meta property="og:description" content={post.excerpt} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description || post.excerpt}
+        image={post.frontmatter?.featureImage?.fluid?.src}
+      />
 
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post?.frontmatter?.title} />
-        <meta name="twitter:description" content={post.excerpt} />
-        <meta
-          name="twitter:image"
-          content={post.frontmatter?.featuredImage?.fluid?.src}
-        />
-      </Helmet>
       <div>
         <h3 className="primary-color mb-2">{post.frontmatter.title}</h3>
         <div className="pb-1">

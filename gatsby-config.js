@@ -9,7 +9,8 @@ module.exports = {
   siteMetadata: {
     title: `Health News EZDOC`,
     siteURL: "https://healthcareappointmentblog.herokuapp.com",
-    image: "/logo192.png",
+    image: "https://ezdoc.pk/logo.png",
+    description: "Health News",
   },
   plugins: [
     {
