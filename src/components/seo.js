@@ -32,6 +32,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
 
   return (
     <Helmet
+      defer={false}
       htmlAttributes={{
         lang,
       }}
