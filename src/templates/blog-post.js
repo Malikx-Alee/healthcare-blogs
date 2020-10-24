@@ -31,7 +31,7 @@ export default function BlogPost({ data }) {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
-        image={post.frontmatter?.featureImage?.fluid?.src}
+        image={post.frontmatter.featureImage?.childImageSharp.fluid?.src}
       />
 
       <div>
