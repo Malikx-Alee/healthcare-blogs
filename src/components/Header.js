@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import { AppBar } from "@material-ui/core"
 import logo from "../assets/img/logo.png"
 import { Navbar, Nav } from "react-bootstrap"
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const useStyles = makeStyles(theme => ({
   appBar: {
