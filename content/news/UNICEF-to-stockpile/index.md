@@ -1,5 +1,5 @@
 ---
-title: "UNICEF to stockpile over half a billion syringes by year end for eventual COVID-19 vaccinations"
+title: "UNICEF to stockpile over half a billion syringes by year end for eventual COVID-19 vaccinations "
 date: "2020-10-20"
 category: "COVID-19"
 type: "news"
