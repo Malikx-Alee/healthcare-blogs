@@ -406,6 +406,11 @@ Version      : 1.2
 
 .health-news-title {
   font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
 }
 
 .news-widget-img-div {

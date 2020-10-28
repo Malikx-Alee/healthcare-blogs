@@ -6,10 +6,17 @@
 
 @import "variables";
 
+#root,
+html,
+body {
+  font-family: "Roboto", sans-serif !important;
+}
+
 html,
 body {
   height: 100%;
   font-size: $font-size-base;
+  overflow-y: hidden;
 }
 
 body,
@@ -187,6 +194,8 @@ input[type="password"] {
 
 p {
   font-size: $font-size-base;
+  color: #625f5f;
+  line-height: 2rem;
 }
 
 .desktop-view-only {
