@@ -1,5 +1,5 @@
 ---
-title: "If You Get the Flu"
+title: "SEASONAL FLU VACINATION"
 date: "2020-11-06"
 category: "Health"
 type: "articles"
