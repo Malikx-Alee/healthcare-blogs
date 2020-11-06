@@ -4,6 +4,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
 import { Link } from "gatsby"
 import { Avatar } from "@material-ui/core"
+import Img from "gatsby-image"
 
 const useStyles = makeStyles(theme => ({
   avatarRoot: {
@@ -42,11 +43,15 @@ function ArticlesWidget(props) {
         <div className="d-flex flex-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
-              <img
-                alt="News"
-                // src={`../../../content/avatar.jpg`}
-                src="https://demo.tagdiv.com/newspaper_covid19_news_pro/wp-content/uploads/2020/03/9-1068x601.jpg"
-              />
+              {props.news.frontmatter && (
+                <Img
+                  fluid={
+                    props.news?.frontmatter?.featureImage?.childImageSharp
+                      ?.fluid
+                  }
+                  objectFit="cover"
+                />
+              )}
             </div>
           </div>
           <div className="news-details-flex">
@@ -68,7 +73,13 @@ function ArticlesWidget(props) {
             </div>
             <div className="news-date">
               <div className={clsx(classes.avatarRoot, "align-self-center")}>
-                <Avatar className={classes.avatar} />{" "}
+                <Avatar
+                  className={classes.avatar}
+                  src={
+                    props.news?.frontmatter?.authorImage?.childImageSharp?.fluid
+                      .src
+                  }
+                />{" "}
                 <span className="primary-color align-self-center">
                   {props.news?.frontmatter?.author}
                 </span>
