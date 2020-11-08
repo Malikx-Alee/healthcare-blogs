@@ -42,6 +42,13 @@ export const query = graphql`
                 }
               }
             }
+            authorImage {
+              childImageSharp {
+                fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
           fields {
             slug

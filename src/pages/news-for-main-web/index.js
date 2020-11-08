@@ -32,7 +32,7 @@ export default function Home({ data }) {
               target="_blank"
               rel="noreferrer"
               className="news-link"
-              to={`https://blogs.ezdoc.pk/` + node?.fields?.slug}
+              to={`https://blogs.ezdoc.pk` + node?.fields?.slug}
             >
               <div>
                 {node.frontmatter && (

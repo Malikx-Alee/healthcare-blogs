@@ -22,17 +22,17 @@ export default function Home({ data }) {
   const classesChip = useStylesChip()
   return (
     <div>
-      <div className="row d-flex ">
+      <div className="row no-gutters">
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div
-            className="col-xs-12 col-sm-6 col-md-6 col-lg-3 home-news-div my-2"
+            className="col-xs-12 col-sm-6 col-md-6 col-lg-3 px-2"
             key={node.id}
           >
             <Link
               target="_blank"
               rel="noreferrer"
               className="news-link"
-              to={`https://blogs.ezdoc.pk/` + node?.fields?.slug}
+              to={`https://blogs.ezdoc.pk` + node?.fields?.slug}
             >
               <div>
                 {/* <img
@@ -67,8 +67,8 @@ export default function Home({ data }) {
             </Link>
           </div>
         ))}
-        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 my-2">
-          <div className="row home-more-news-div">
+        <div className="col-xs-12 col-sm-6 col-md-6 col-lg-3 px-2">
+          <div className="row no-gutters home-more-news-div">
             <div className="col-12 align-self-center justify-content-center text-center">
               <a
                 href="https://blogs.ezdoc.pk/articles/"

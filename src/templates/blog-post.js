@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Chip from "@material-ui/core/Chip"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import { Avatar } from "@material-ui/core"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -18,7 +19,25 @@ const useStylesChip = makeStyles(theme => ({
   },
 }))
 
+const useStyles = makeStyles(theme => ({
+  avatarRoot: {
+    display: "flex",
+    "& > *": {
+      marginRight: theme.spacing(1),
+    },
+  },
+  avatar: {
+    color: "#007780",
+    backgroundColor: "rgba(0, 119, 128, 0.05)",
+    // [theme.breakpoints.down("sm")]: {
+    //   width: theme.spacing(4),
+    //   height: theme.spacing(4),
+    // },
+  },
+}))
+
 export default function BlogPost({ data }) {
+  const classes = useStyles()
   const classesChip = useStylesChip()
   const post = data.markdownRemark
   return (
@@ -36,6 +55,17 @@ export default function BlogPost({ data }) {
 
       <div>
         <h3 className="primary-color mb-2">{post.frontmatter.title}</h3>
+        {post?.frontmatter.type === "articles" ? (
+          <div className="row no-gutters">
+            <Avatar
+              className={classes.avatar}
+              src={post?.frontmatter?.authorImage?.childImageSharp?.fluid.src}
+            />{" "}
+            <span className="ml-3 primary-color align-self-center">
+              {post?.frontmatter?.author}
+            </span>
+          </div>
+        ) : null}
         <div className="pb-1">
           <Chip
             className={clsx(classesChip.root, "mt-2")}
@@ -64,10 +94,18 @@ export const query = graphql`
         title
         category
         type
+        author
         featureImage {
           childImageSharp {
             fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        authorImage {
+          childImageSharp {
+            fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
