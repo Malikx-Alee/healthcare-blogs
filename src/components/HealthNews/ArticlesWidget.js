@@ -40,7 +40,7 @@ function ArticlesWidget(props) {
   return (
     <div className="card news-card">
       <Link className="news-link" to={props.news?.fields?.slug}>
-        <div className="d-flex flex-row">
+        <div className="d-flex flex-column flex-md-row">
           <div className="news-flex">
             <div className="news-widget-img-div">
               {props.news.frontmatter && (
@@ -54,7 +54,7 @@ function ArticlesWidget(props) {
               )}
             </div>
           </div>
-          <div className="news-details-flex">
+          <div className="news-details-flex px-1 px-md-4">
             <div className="pb-1">
               <Chip
                 className={clsx(classesChip.root, "mt-2")}
@@ -69,9 +69,12 @@ function ArticlesWidget(props) {
             </div>
 
             <div className="news-widget-title news-excerpt">
-              <p className="primary-color">{props.news?.excerpt}</p>
+              <p className="primary-color mb-0">{props.news?.excerpt}</p>
             </div>
             <div className="news-date">
+              <p className="primary-color mb-0 news-widget-dateTime align-self-center">
+                {props.news?.frontmatter?.date}
+              </p>
               <div className={clsx(classes.avatarRoot, "align-self-center")}>
                 <Avatar
                   className={classes.avatar}
@@ -84,9 +87,6 @@ function ArticlesWidget(props) {
                   {props.news?.frontmatter?.author}
                 </span>
               </div>
-              <span className="news-widget-dateTime float-right align-self-center">
-                {props.news?.frontmatter?.date}
-              </span>
             </div>
           </div>
         </div>

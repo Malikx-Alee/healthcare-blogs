@@ -68,6 +68,12 @@ export default function HeaderMenuAppBar(props) {
                 <Nav.Link href="https://ezdoc.pk/registerphysician">
                   <p className="header-new-nav">REGISTER PHYSICIAN </p>
                 </Nav.Link>
+                <Nav.Link href="https://blogs.ezdoc.pk/news">
+                  <p className="header-new-nav">NEWS </p>
+                </Nav.Link>
+                <Nav.Link href="https://blogs.ezdoc.pk/articles">
+                  <p className="header-new-nav">ARTICLES </p>
+                </Nav.Link>
               </Nav>
               <Nav>
                 <Nav.Link href="https://ezdoc.pk/register">

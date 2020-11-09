@@ -7,7 +7,7 @@ import ArticlesWidget from "../../components/HealthNews/ArticlesWidget"
 
 export default function Home({ data }) {
   return (
-    <Layout title="Health News">
+    <Layout title="Health Articles">
       <div>
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         {data.allMarkdownRemark.edges.map(({ node }) => (

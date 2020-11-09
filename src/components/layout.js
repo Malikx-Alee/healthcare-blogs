@@ -7,7 +7,7 @@ export default function Layout({ children, title, redirectTo }) {
     <>
       <Header />
       <div className="news-layout">
-        <Link to={redirectTo ? `/${redirectTo}` : "/"}>
+        <Link to={redirectTo ? `/${redirectTo}` : null}>
           <h2 className="primary-color d-inline-block mb-2">{title}</h2>
         </Link>
         {/* <Divider /> */}
