@@ -29,6 +29,7 @@ export default function Home({ data }) {
             key={node.id}
           >
             <Link
+              target="_blank"
               rel="noreferrer"
               className="news-link"
               to={`https://blogs.ezdoc.pk` + node?.fields?.slug}
