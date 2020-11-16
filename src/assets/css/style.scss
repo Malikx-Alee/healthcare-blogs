@@ -407,6 +407,7 @@ Version      : 1.2
 .health-news-title {
   font-size: 0.85rem;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
@@ -427,6 +428,7 @@ Version      : 1.2
 .news-widget-title {
   font-size: 1.5rem;
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 1; /* number of lines to show */
