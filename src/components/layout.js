@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Layout({ children, title, redirectTo }) {
   return (
@@ -13,6 +14,7 @@ export default function Layout({ children, title, redirectTo }) {
         {/* <Divider /> */}
         {children}
       </div>
+      <Footer />
     </>
   )
 }
