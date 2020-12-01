@@ -1,6 +1,6 @@
 ---
 title: "Nutritional Inadequacy in school years may create a height gap of 20 cm"
-date: "2020-12-12"
+date: "2020-12-02"
 category: "Health"
 type: "news"
 featureImage: "./height_gap_20cm.jpg"
