@@ -62,8 +62,8 @@ function ArticlesWidget(props) {
                 label={props.news?.frontmatter?.category}
               />
             </div>
-            <div className="news-widget-title">
-              <h3 className="primary-color">
+            <div>
+              <h3 className="primary-color news-widget-title">
                 {props.news?.frontmatter?.title}
               </h3>
             </div>
