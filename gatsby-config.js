@@ -8,7 +8,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: `Health News EZDOC`,
-    siteURL: "https://healthcareappointmentblog.herokuapp.com",
+    siteUrl: "https://blogs.ezdoc.pk",
     image: "https://ezdoc.pk/logo.png",
     description: "Health News",
   },
@@ -53,6 +53,12 @@ module.exports = {
             },
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        sitemapSize: 5000,
       },
     },
     `gatsby-plugin-react-helmet`,
