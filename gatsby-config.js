@@ -59,6 +59,44 @@ module.exports = {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         sitemapSize: 5000,
+        query: `
+          {
+            site{
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        resolveSiteUrl: ({ site, allSitePage }) => {
+          //Alternatively, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+          return site.siteMetadata.siteUrl
+        },
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            console.log(node.path)
+            if (
+              node.path === "/news/" ||
+              node.path === "/articles/" ||
+              node.path === "/"
+            ) {
+              return {
+                url: `${site.siteMetadata.siteUrl}${node.path}`,
+                changefreq: `daily`,
+                priority: 1.0,
+              }
+            } else {
+              return {
+                url: `${site.siteMetadata.siteUrl}${node.path}`,
+                changefreq: `daily`,
+                priority: 0.7,
+              }
+            }
+          }),
       },
     },
     `gatsby-plugin-react-helmet`,
