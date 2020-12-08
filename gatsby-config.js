@@ -119,7 +119,7 @@ module.exports = {
         // Any additional optional fields
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "ezdoc.pk",
+        cookieDomain: "healthcareappointmentblog.herokuapp.com",
       },
     },
     `gatsby-plugin-react-helmet`,
