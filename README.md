@@ -1,5 +1,5 @@
-
 # healthcare_blogs
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -100,3 +100,12 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
+# Ali Comments
+
+# For Deployment on heroku
+
+https://www.gatsbyjs.com/docs/deploying-to-heroku/
+
+# For Google Analytics
+
+Add Tracking Id in gatsby-config.js under the plugin gatsby-plugin-google-gtag.
