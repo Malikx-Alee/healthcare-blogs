@@ -117,6 +117,8 @@ module.exports = {
         // Defers execution of google analytics script after page load
         defer: false,
         // Any additional optional fields
+        sampleRate: 5,
+        siteSpeedSampleRate: 10,
         cookieDomain: "ezdoc.pk",
       },
     },
