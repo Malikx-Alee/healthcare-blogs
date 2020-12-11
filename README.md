@@ -109,3 +109,13 @@ https://www.gatsbyjs.com/docs/deploying-to-heroku/
 # For Google Analytics
 
 Add Tracking Id in gatsby-config.js under the plugin gatsby-plugin-google-gtag.
+
+# Generating Measurement ID
+
+1. Open google analytics dashboard , Click on Admin Button in Bottom Left Menu.
+
+2. Click on Data Streams
+
+3. Create a data stream of your desire (web / ios / android)
+
+4. Use the measurement id the env variable of this app
