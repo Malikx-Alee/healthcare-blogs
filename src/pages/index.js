@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../assets/css/style.scss"
-import NewsWidget from "../components/HealthNews/NewWidget"
+import NewsWidget from "../components/HealthNews/NewsWidget"
 import { Helmet } from "react-helmet"
 
 export default function Home({ data }) {
