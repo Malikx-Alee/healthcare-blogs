@@ -1,0 +1,11 @@
+# content/author.yaml
+
+- id: sulaman-yaqub
+  name: Sulaman Yaqub
+  bio: A talented Person.
+  image: ./assets/sulaman-yaqub.jpeg
+
+- id: amer-sohail
+  name: Amer Sohail
+  bio: Project Owner.
+  image: ./assets/amer_sohail.jpeg

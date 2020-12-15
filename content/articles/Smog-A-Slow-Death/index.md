@@ -3,9 +3,8 @@ title: "Smog A Slow Death"
 date: "2020-11-06"
 category: "Health"
 type: "articles"
-author: "Sulaman Yaqub"
+author: "sulaman-yaqub"
 featureImage: "smog.jpg"
-authorImage: "author.jpeg"
 ---
 
 Smog is a yellowish or brownish grey haze formed mainly by the reaction of water droplets with heavy and light pollutants in the atmosphere. It is characterized by an unpleasant odour due to its gaseous components and a dense misty air that makes you feel suffocated or choked and affects your range of vision bringing it to less or zero visibility.

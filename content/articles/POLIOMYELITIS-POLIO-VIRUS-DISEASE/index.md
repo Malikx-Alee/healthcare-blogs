@@ -3,9 +3,8 @@ title: "POLIOMYELITIS (POLIO VIRUS DISEASE)"
 date: "2020-11-24"
 category: "Health"
 type: "articles"
-author: "Sulaman Yaqub"
+author: "sulaman-yaqub"
 featureImage: "polio-drops.jpg"
-authorImage: "author.jpeg"
 ---
 
 Polio, or poliomyelitis, is an impeding and potentially fatal viral infection caused by the poliovirus that strikes the human nervous system effecting brain and spinal cord virtually paralyzing the body or some part of it.

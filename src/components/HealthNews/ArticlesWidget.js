@@ -79,12 +79,12 @@ function ArticlesWidget(props) {
                 <Avatar
                   className={classes.avatar}
                   src={
-                    props.news?.frontmatter?.authorImage?.childImageSharp?.fluid
-                      .src
+                    props.news?.frontmatter?.author?.image?.childImageSharp
+                      ?.fluid.src
                   }
                 />{" "}
                 <span className="primary-color align-self-center">
-                  {props.news?.frontmatter?.author}
+                  {props.news?.frontmatter?.author?.name}
                 </span>
               </div>
             </div>

@@ -34,6 +34,14 @@ const useStyles = makeStyles(theme => ({
     //   height: theme.spacing(4),
     // },
   },
+  avatarBio: {
+    color: "#007780",
+    backgroundColor: "rgba(0, 119, 128, 0.05)",
+    [theme.breakpoints.up("sm")]: {
+      width: theme.spacing(9),
+      height: theme.spacing(9),
+    },
+  },
 }))
 
 export default function BlogPost({ data }) {
@@ -59,10 +67,10 @@ export default function BlogPost({ data }) {
           <div className="row no-gutters">
             <Avatar
               className={classes.avatar}
-              src={post?.frontmatter?.authorImage?.childImageSharp?.fluid.src}
+              src={post?.frontmatter?.author?.image?.childImageSharp?.fluid.src}
             />{" "}
             <span className="ml-3 primary-color align-self-center">
-              {post?.frontmatter?.author}
+              {post?.frontmatter?.author?.name}
             </span>
           </div>
         ) : null}
@@ -81,6 +89,23 @@ export default function BlogPost({ data }) {
         )}
         <br />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <br />
+        <hr />
+        <br />
+        <div className="row no-gutters">
+          <Avatar
+            className={classes.avatarBio}
+            src={post?.frontmatter?.author?.image?.childImageSharp?.fluid.src}
+          />{" "}
+          <div className="col">
+            <h4 className="ml-3 primary-color align-self-center">
+              {post?.frontmatter?.author?.name} - Author
+            </h4>
+            <p className="ml-3 primary-color align-self-center">
+              {post?.frontmatter?.author?.bio}
+            </p>
+          </div>
+        </div>
       </div>
     </Layout>
   )
@@ -94,18 +119,22 @@ export const query = graphql`
         title
         category
         type
-        author
+        author {
+          id
+          name
+          bio
+          image {
+            childImageSharp {
+              fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
         featureImage {
           childImageSharp {
             fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
               ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        authorImage {
-          childImageSharp {
-            fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
-              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

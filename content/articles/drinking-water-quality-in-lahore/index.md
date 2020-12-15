@@ -3,9 +3,8 @@ title: "DRINKING WATER QUALITY IN LAHORE"
 date: "2020-12-14"
 category: "Health"
 type: "articles"
-author: "Sulaman Yaqub"
+author: "sulaman-yaqub"
 featureImage: "water.jpg"
-authorImage: "author.jpeg"
 ---
 
 Water quality depicts the biological, physical and chemical condition of the water for drinking or swimming. All across the country, residents are experiencing issues with contaminated water.

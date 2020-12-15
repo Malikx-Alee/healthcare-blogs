@@ -3,9 +3,8 @@ title: "SEASONAL FLU VACINATION"
 date: "2020-11-06"
 category: "Health"
 type: "articles"
-author: "Sulaman Yaqub"
+author: "sulaman-yaqub"
 featureImage: "flu.jpg"
-authorImage: "author.jpeg"
 ---
 
 Acute respiratory disorder caused by influenza viruses (A, B, and C) is commonly called seasonal flu or influenza. It attacks your respiratory system including your nose, throat and lungs. Flu Shots are high in demand on the start of fall season every year to protect yourself and others from its ambush. It can make your life a little easier.

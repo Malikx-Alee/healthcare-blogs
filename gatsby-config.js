@@ -12,7 +12,17 @@ module.exports = {
     image: "https://ezdoc.pk/logo.png",
     description: "Health News",
   },
+  mapping: {
+    "MarkdownRemark.frontmatter.author": `AuthorYaml`,
+  },
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "mappings",
+        path: `${__dirname}/content/`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -110,6 +120,7 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-yaml`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

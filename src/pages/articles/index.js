@@ -34,17 +34,21 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             category
-            author
-            featureImage {
-              childImageSharp {
-                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+            author {
+              id
+              name
+              bio
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
                 }
               }
             }
-            authorImage {
+            featureImage {
               childImageSharp {
-                fluid(maxWidth: 200, quality: 100, maxHeight: 200) {
+                fluid(maxWidth: 800, quality: 100, maxHeight: 400) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }

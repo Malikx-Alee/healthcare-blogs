@@ -3,9 +3,8 @@ title: "The eighth International Lead Poisoning Prevention Week (ILPPW)"
 date: "2020-11-06"
 category: "Health"
 type: "articles"
-author: "Amer Sohail"
+author: "amer-sohail"
 featureImage: "lead.jpeg"
-authorImage: "author.jpeg"
 ---
 
 WHO is having The eighth International Lead Poisoning Prevention Week (ILPPW) between 25-31 Oct 2020. This week of acton is an initative of the Global Alliance to Eliminate Lead Paint (the Lead Pain Alliance) which is jointly led by the UN Environment Programme and WHO. The manufacture and sale of lead paint is still permitted in over 60% of countries, presenting a continuing and future source of lead exposure for children and workers.
