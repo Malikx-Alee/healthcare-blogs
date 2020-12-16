@@ -7,6 +7,7 @@ import Chip from "@material-ui/core/Chip"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
 import { Avatar } from "@material-ui/core"
+import ShareButtons from "../components/ShareButtons/sharebuttons"
 
 const useStylesChip = makeStyles(theme => ({
   root: {
@@ -44,10 +45,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function BlogPost({ data }) {
+export default function BlogPost(props) {
   const classes = useStyles()
   const classesChip = useStylesChip()
-  const post = data.markdownRemark
+  const post = props.data.markdownRemark
+
+  const title = `Read ${props.data.markdownRemark.frontmatter.title} `
+  const url = props.location.href
   return (
     <Layout
       title={
@@ -89,6 +93,10 @@ export default function BlogPost({ data }) {
         )}
         <br />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <br />
+
+        <ShareButtons title={title} url={url} />
+
         <br />
         <hr />
         <br />
