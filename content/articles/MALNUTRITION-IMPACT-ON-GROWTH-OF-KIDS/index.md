@@ -3,7 +3,7 @@ title: "Malnutrition Impact On Growth Of Kids"
 date: "2020-12-21"
 category: "Health"
 type: "articles"
-author: "sulaman-yaqub"
+author: "ifrah-malik"
 featureImage: "featured.jpg"
 ---
 

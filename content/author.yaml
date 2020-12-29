@@ -9,3 +9,8 @@
   name: Amer Sohail
   bio: Project Owner.
   image: ./assets/amer-sohail.jpeg
+
+- id: ifrah-malik
+  name: Ifrah Malik
+  bio: Content Writer
+  image: ./assets/female.png
