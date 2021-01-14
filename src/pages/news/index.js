@@ -4,10 +4,12 @@ import Layout from "../../components/layout"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../../assets/css/style.scss"
 import NewsWidget from "../../components/HealthNews/NewsWidget"
+import SEO from "../../components/seo"
 
 export default function Home({ data }) {
   return (
     <Layout title="Health News">
+      <SEO title={"Health News"} />
       <div>
         {/* <h4>{data.allMarkdownRemark.totalCount} Posts</h4> */}
         {data.allMarkdownRemark.edges.map(({ node }) => (
