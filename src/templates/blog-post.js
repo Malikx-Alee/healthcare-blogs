@@ -97,23 +97,30 @@ export default function BlogPost(props) {
 
         <ShareButtons title={title} url={url} />
 
-        <br />
-        <hr />
-        <br />
-        <div className="row no-gutters">
-          <Avatar
-            className={classes.avatarBio}
-            src={post?.frontmatter?.author?.image?.childImageSharp?.fluid.src}
-          />{" "}
-          <div className="col">
-            <h4 className="ml-3 primary-color align-self-center">
-              {post?.frontmatter?.author?.name} - Author
-            </h4>
-            <p className="ml-3 primary-color align-self-center">
-              {post?.frontmatter?.author?.bio}
-            </p>
-          </div>
-        </div>
+        {post?.frontmatter?.author ? (
+          <>
+            <br />
+            <hr />
+            <br />
+
+            <div className="row no-gutters">
+              <Avatar
+                className={classes.avatarBio}
+                src={
+                  post?.frontmatter?.author?.image?.childImageSharp?.fluid.src
+                }
+              />{" "}
+              <div className="col">
+                <h4 className="ml-3 primary-color align-self-center">
+                  {post?.frontmatter?.author?.name} - Author
+                </h4>
+                <p className="ml-3 primary-color align-self-center">
+                  {post?.frontmatter?.author?.bio}
+                </p>
+              </div>
+            </div>
+          </>
+        ) : null}
       </div>
     </Layout>
   )
