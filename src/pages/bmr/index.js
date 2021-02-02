@@ -4,8 +4,6 @@ import axios from "axios"
 import { useHistory } from "react-router-dom"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-// import "react-datepicker/dist/react-datepicker.css";
-// import "react-datepicker/dist/react-datepicker-cssmodules.css";
 import { Helmet } from "react-helmet"
 // import ReactGA from "react-ga";
 // import ErrorBoundary from "../components/ErrorHanlder/ErrorBoundary";
