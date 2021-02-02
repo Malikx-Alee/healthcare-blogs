@@ -178,8 +178,8 @@ input[type="password"] {
   background-color: $white-color;
 }
 .btn-background {
-  color: $white-color;
-  background-color: $primary-color;
+  color: $white-color !important;
+  background-color: $primary-color !important;
 }
 
 .spinner-color {

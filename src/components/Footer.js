@@ -59,18 +59,42 @@ function Footer() {
                 <h2 className="footer-title">For Patients</h2>
                 <ul>
                   <li>
-                    <a href="/searchDoctor">
-                      <i className="fas fa-angle-double-right"></i> Search for
-                      Doctors
+                    <a href="https://ezdoc.pk/searchDoctor/Lahore">
+                      <i className="fas fa-angle-double-right"></i> Search
+                      Doctors in Lahore
                     </a>
                   </li>
                   <li>
-                    <a href="/login">
+                    <a href="https://ezdoc.pk/searchDoctor/Islamabad">
+                      <i className="fas fa-angle-double-right"></i> Search
+                      Doctors in Islamabad
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://ezdoc.pk/searchDoctor/Rawalpindi">
+                      <i className="fas fa-angle-double-right"></i> Search
+                      Doctors in Rawalpindi
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://blogs.ezdoc.pk/bmi">
+                      <i className="fas fa-angle-double-right"></i> Calculate
+                      Body Mass Index
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://blogs.ezdoc.pk/bmr">
+                      <i className="fas fa-angle-double-right"></i> Calculate
+                      Body Metabolic Rate
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://ezdoc.pk/login">
                       <i className="fas fa-angle-double-right"></i> Login
                     </a>
                   </li>
                   <li>
-                    <a href="/register">
+                    <a href="https://ezdoc.pk/register">
                       <i className="fas fa-angle-double-right"></i> Register
                     </a>
                   </li>
@@ -95,12 +119,12 @@ function Footer() {
                 <h2 className="footer-title">For Physicians</h2>
                 <ul>
                   <li>
-                    <a href="/physician">
+                    <a href="https://ezdoc.pk/physician">
                       <i className="fas fa-angle-double-right"></i> Login
                     </a>
                   </li>
                   <li>
-                    <a href="/registerphysician">
+                    <a href="https://ezdoc.pk/registerphysician">
                       <i className="fas fa-angle-double-right"></i> Apply for
                       Registration
                     </a>
@@ -115,7 +139,7 @@ function Footer() {
               <div className="footer-widget footer-contact">
                 <h2 className="footer-title">Contact Us</h2>
 
-                <div className="footer-contact-info">
+                <div className="footer-contact-info white-color">
                   <p className="white-color">
                     {" "}
                     EZDOC SOLUTIONS (PRIVATE) LIMITED
@@ -123,11 +147,12 @@ function Footer() {
                   <div className="footer-address">
                     <p className="white-color">
                       {" "}
-                      89 Temple Road Lahore, Pakistan{" "}
+                      89 Temple Road Lahore Pakistan{" "}
                     </p>
                   </div>
+                  <p className="white-color">+92 305 788 8821</p>
                   <p className="white-color">+92 336 497 7817</p>
-                  <p className="mb-0 white-color">support@ezdoc.pk</p>
+                  <p className="mb-0 white-color">contact@ezdoc.pk</p>
                 </div>
               </div>
               {/* <!-- /Foote/r Widget --> */}
@@ -146,7 +171,7 @@ function Footer() {
               <div className="col-md-6 col-lg-6">
                 <div className="copyright-text">
                   <p className="mb-0">
-                    &copy; 2020 EZDOC SOLUTIONS (PRIVATE) LIMITED. All rights
+                    &copy; 2021 EZDOC SOLUTIONS (PRIVATE) LIMITED. All rights
                     reserved.
                   </p>
                 </div>
@@ -156,10 +181,12 @@ function Footer() {
                 <div className="copyright-menu">
                   <ul className="policy-menu">
                     <li>
-                      <a href="/terms-and-conditions">Terms and Conditions</a>
+                      <a href="https://ezdoc.pk/terms-and-conditions">
+                        Terms and Conditions
+                      </a>
                     </li>
                     <li>
-                      <a href="privacy-policy">Policy</a>
+                      <a href="https://ezdoc.pk/privacy-policy">Policy</a>
                     </li>
                   </ul>
                 </div>

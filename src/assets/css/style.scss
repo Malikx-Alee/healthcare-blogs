@@ -9,6 +9,7 @@ Version      : 1.2
 
 1. Header
 2. Health News
+3. BMI / BMR
 
 ========================================*/
 
@@ -678,4 +679,83 @@ a.news-link:hover {
 }
 .policy-menu li:last-child::after {
   content: "";
+}
+
+/*-----------------
+	3. BMI / BMR
+-----------------------*/
+
+.bmi-result-div {
+  height: 195px;
+  background-color: $primary-color;
+  color: $white-color !important;
+  padding: 10px;
+}
+
+.bmi-result-text {
+  font-size: 1.75rem;
+}
+
+.bmi-result-number {
+  font-size: 3rem;
+}
+
+.bmi-details {
+  font-size: $font-size-base;
+  color: $primary-color;
+}
+
+.bmi-measure {
+  padding: 20px;
+  margin: 10px;
+  border: 2px solid $primary-color;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  min-width: 180px;
+}
+
+.bmi-measure-text p {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.bmi-measure-img {
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.bmi-underweight {
+  color: #87b1d9;
+}
+.bmi-normal {
+  color: #3dd365;
+}
+.bmi-overweight {
+  color: #eee133;
+}
+.bmi-obese {
+  color: #fd802e;
+}
+.bmi-extremely-obese {
+  color: #f95353;
+}
+
+.tab-top {
+  top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bmi-img {
+    width: 100%;
+    height: 152px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bmi-img {
+    width: 100%;
+    height: 152px;
+  }
 }
