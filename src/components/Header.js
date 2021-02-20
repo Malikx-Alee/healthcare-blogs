@@ -62,10 +62,12 @@ export default function HeaderMenuAppBar(props) {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link href="https://ezdoc.pk">
+                <Nav.Link href={process.env.REACT_APP_MAIN_DOMAIN}>
                   <p className="header-new-nav primary-color">HOME </p>
                 </Nav.Link>
-                <Nav.Link href="https://ezdoc.pk/registerphysician">
+                <Nav.Link
+                  href={`${process.env.REACT_APP_MAIN_DOMAIN}/registerphysician`}
+                >
                   <p className="header-new-nav">REGISTER PHYSICIAN </p>
                 </Nav.Link>
                 <Nav.Link href="https://blogs.ezdoc.pk/news">
@@ -76,12 +78,12 @@ export default function HeaderMenuAppBar(props) {
                 </Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link href="https://ezdoc.pk/register">
+                <Nav.Link href={`${process.env.REACT_APP_MAIN_DOMAIN}/signup`}>
                   <p className="header-login-signup"> SIGN UP </p>
                 </Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link href="https://ezdoc.pk/login">
+                <Nav.Link href={`${process.env.REACT_APP_MAIN_DOMAIN}/login`}>
                   <p className="header-login-signup"> SIGN IN </p>
                 </Nav.Link>
               </Nav>

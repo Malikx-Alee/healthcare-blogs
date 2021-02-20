@@ -4,7 +4,7 @@ import footerLogo from "../assets/img/logo-white.svg"
 // import EmailIcon from "@material-ui/icons/Email";
 // import PhoneIcon from "@material-ui/icons/Phone";
 
-function Footer() {
+function Footer(props) {
   return (
     <footer className="footer">
       {/* <!-- Footer Top --> */}
@@ -59,45 +59,55 @@ function Footer() {
                 <h2 className="footer-title">For Patients</h2>
                 <ul>
                   <li>
-                    <a href="https://ezdoc.pk/searchDoctor/Lahore">
+                    <a
+                      href={`${process.env.REACT_APP_MAIN_DOMAIN}/searchDoctor/Lahore`}
+                    >
                       <i className="fas fa-angle-double-right"></i> Search
                       Doctors in Lahore
                     </a>
                   </li>
                   <li>
-                    <a href="https://ezdoc.pk/searchDoctor/Islamabad">
+                    <a
+                      href={`${process.env.REACT_APP_MAIN_DOMAIN}/searchDoctor/Islamabad`}
+                    >
                       <i className="fas fa-angle-double-right"></i> Search
                       Doctors in Islamabad
                     </a>
                   </li>
                   <li>
-                    <a href="https://ezdoc.pk/searchDoctor/Rawalpindi">
+                    <a
+                      href={`${process.env.REACT_APP_MAIN_DOMAIN}/searchDoctor/Rawalpindi`}
+                    >
                       <i className="fas fa-angle-double-right"></i> Search
                       Doctors in Rawalpindi
                     </a>
                   </li>
                   <li>
-                    <a href="https://blogs.ezdoc.pk/bmi">
+                    <a href={`${process.env.REACT_APP_MAIN_DOMAIN}/bmi`}>
                       <i className="fas fa-angle-double-right"></i> Calculate
                       Body Mass Index
                     </a>
                   </li>
                   <li>
-                    <a href="https://blogs.ezdoc.pk/bmr">
+                    <a href={`${process.env.REACT_APP_MAIN_DOMAIN}/bmr`}>
                       <i className="fas fa-angle-double-right"></i> Calculate
                       Body Metabolic Rate
                     </a>
                   </li>
-                  <li>
-                    <a href="https://ezdoc.pk/login">
-                      <i className="fas fa-angle-double-right"></i> Login
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://ezdoc.pk/register">
-                      <i className="fas fa-angle-double-right"></i> Register
-                    </a>
-                  </li>
+                  {props.userData ? null : (
+                    <>
+                      <li>
+                        <a href="/login">
+                          <i className="fas fa-angle-double-right"></i> Login
+                        </a>
+                      </li>
+                      <li>
+                        <a href={`${process.env.REACT_APP_MAIN_DOMAIN}/signup`}>
+                          <i className="fas fa-angle-double-right"></i> Register
+                        </a>
+                      </li>
+                    </>
+                  )}
                   <li>
                     <a href="https://blogs.ezdoc.pk/news/">
                       <i className="fas fa-angle-double-right"></i> News
@@ -115,31 +125,33 @@ function Footer() {
 
             <div className="col-lg-3 col-md-6">
               {/* <!-- Footer Widget --> */}
-              <div className="footer-widget footer-menu">
-                <h2 className="footer-title">For Physicians</h2>
-                <ul>
-                  <li>
-                    <a href="https://ezdoc.pk/physician">
-                      <i className="fas fa-angle-double-right"></i> Login
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://ezdoc.pk/registerphysician">
-                      <i className="fas fa-angle-double-right"></i> Apply for
-                      Registration
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              {props.userData ? null : (
+                <div className="footer-widget footer-menu">
+                  <h2 className="footer-title">For Physicians</h2>
+                  <ul>
+                    <li>
+                      <a href="/physician">
+                        <i className="fas fa-angle-double-right"></i> Login
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/registerphysician">
+                        <i className="fas fa-angle-double-right"></i> Apply for
+                        Registration
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              )}
               {/* <!-- /Footer Widget --> */}
             </div>
 
-            <div className="col-lg-3 col-md-6">
+            <div className="col-lg-3 col-md-6 white-color">
               {/* <!-- Footer Widget --> */}
               <div className="footer-widget footer-contact">
                 <h2 className="footer-title">Contact Us</h2>
 
-                <div className="footer-contact-info white-color">
+                <div className="footer-contact-info">
                   <p className="white-color">
                     {" "}
                     EZDOC SOLUTIONS (PRIVATE) LIMITED
@@ -181,12 +193,18 @@ function Footer() {
                 <div className="copyright-menu">
                   <ul className="policy-menu">
                     <li>
-                      <a href="https://ezdoc.pk/terms-and-conditions">
+                      <a
+                        href={`${process.env.REACT_APP_MAIN_DOMAIN}/terms-and-conditions`}
+                      >
                         Terms and Conditions
                       </a>
                     </li>
                     <li>
-                      <a href="https://ezdoc.pk/privacy-policy">Policy</a>
+                      <a
+                        href={`${process.env.REACT_APP_MAIN_DOMAIN}/privacy-policy`}
+                      >
+                        Policy
+                      </a>
                     </li>
                   </ul>
                 </div>

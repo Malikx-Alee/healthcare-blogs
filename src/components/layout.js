@@ -53,7 +53,7 @@ export default function Layout({
             user?.role !== undefined && openMenu ? true : false,
         })}
       >
-        <Footer />
+        <Footer userData={user?.role !== undefined ? user : null} />
       </div>
     </>
   )
