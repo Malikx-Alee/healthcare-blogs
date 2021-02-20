@@ -130,12 +130,16 @@ function Footer(props) {
                   <h2 className="footer-title">For Physicians</h2>
                   <ul>
                     <li>
-                      <a href="/physician">
+                      <a
+                        href={`${process.env.REACT_APP_MAIN_DOMAIN}/forphysicians`}
+                      >
                         <i className="fas fa-angle-double-right"></i> Login
                       </a>
                     </li>
                     <li>
-                      <a href="/registerphysician">
+                      <a
+                        href={`${process.env.REACT_APP_MAIN_DOMAIN}/registerphysician`}
+                      >
                         <i className="fas fa-angle-double-right"></i> Apply for
                         Registration
                       </a>
