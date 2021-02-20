@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import clsx from "clsx"
+import axios from "axios"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { makeStyles } from "@material-ui/core/styles"
@@ -48,12 +49,61 @@ const useStyles = makeStyles(theme => ({
 export default function BlogPost(props) {
   const classes = useStyles()
   const classesChip = useStylesChip()
+
+  let [user, setUser] = useState({})
+  let [loggedInStatus, setLoggedInStatus] = useState("NOT_LOGGED_IN")
+  let checkLoginStatusNew = () => {
+    axios
+      .get(
+        `${process.env.REACT_APP_BACKEND_SERVER_ADDRESS}/api/v1/auth/logged_in`,
+        {
+          withCredentials: true,
+        }
+      )
+      .then(response => {
+        if (response.data.logged_in && loggedInStatus === "NOT_LOGGED_IN") {
+          setUser(response.data.user)
+          setLoggedInStatus("LOGGED_IN")
+        } else if (!response.data.logged_in && loggedInStatus === "LOGGED_IN") {
+          setLoggedInStatus("NOT_LOGGED_IN")
+          setUser({})
+        }
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+  let logoutRequest = () => {
+    axios
+      .get(
+        `${process.env.REACT_APP_BACKEND_SERVER_ADDRESS}/api/v1/auth/logout`,
+        {
+          withCredentials: true,
+        }
+      )
+      .then(response => {
+        setLoggedInStatus("NOT_LOGGED_IN")
+        setUser({})
+        // router.push("/")
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  useEffect(() => {
+    checkLoginStatusNew()
+  }, [])
+
   const post = props.data.markdownRemark
 
   const title = `Read ${props.data.markdownRemark.frontmatter.title} `
   const url = props.location.href
   return (
     <Layout
+      loggedInStatus={loggedInStatus}
+      user={user}
+      logoutRequest={logoutRequest}
       title={
         post.frontmatter.type === "news" ? "Health News" : "Health Articles"
       }

@@ -364,6 +364,21 @@ Version      : 1.2
   padding: 0 10px;
 }
 
+.patient-header-bar {
+  background-color: $primary-color;
+  height: 1.5rem;
+}
+
+.patient-header-bar p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.patient-header-bar a {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
 /*-----------------
 	2. Health News
 -----------------------*/
@@ -681,6 +696,13 @@ a.news-link:hover {
   content: "";
 }
 
+.footer-user {
+  margin-left: 80px;
+}
+.footer-user-menu {
+  margin-left: 280px;
+}
+
 /*-----------------
 	3. BMI / BMR
 -----------------------*/
@@ -758,4 +780,305 @@ a.news-link:hover {
     width: 100%;
     height: 152px;
   }
+}
+
+/*
+  Sidebars
+*/
+@media only screen and (max-width: 768px) {
+  .patient-header-bar {
+    background-color: $primary-color;
+    height: 1rem;
+  }
+
+  .patient-header-bar p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    margin-top: -1px;
+  }
+
+  .patient-header-bar a {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+    margin-top: -1px;
+  }
+}
+
+.profile-sidebar {
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.pro-widget-content {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-info-widget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+.profile-info-widget .booking-doc-img {
+  margin-right: 15px;
+}
+.profile-info-widget .booking-doc-img img {
+  border-radius: 4px;
+  height: 90px;
+  width: 90px;
+  object-fit: cover;
+}
+.profile-det-info {
+  overflow: hidden;
+}
+.profile-det-info h3 {
+  font-size: 17px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.patient-details h5 {
+  color: #757575;
+  font-size: 13px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.patient-details h5 i {
+  width: 18px;
+}
+.dashboard-menu ul {
+  color: #757575;
+  font-size: 14px;
+  line-height: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+.dashboard-menu ul li {
+  line-height: inherit;
+}
+.dashboard-menu > ul > li {
+  border-bottom: 1px solid #f0f0f0;
+  position: relative;
+}
+.dashboard-menu > ul > li:last-child {
+  border-bottom: 0;
+}
+.dashboard-menu ul li a span,
+.dashboard-menu ul li a i {
+  display: inline-block;
+  vertical-align: middle;
+}
+.dashboard-menu > ul > li > a {
+  color: #757575;
+  display: block;
+  padding: 10px 15px;
+}
+.dashboard-menu > ul > li:hover > a,
+.dashboard-menu > ul > li.active > a {
+  color: #007780;
+}
+.dashboard-menu ul li a svg {
+  /* font-size: 16px; */
+  margin-right: 20px;
+  /* width: 16px; */
+}
+.widget-profile.pat-widget-profile .profile-info-widget .booking-doc-img {
+  padding: 0;
+}
+.widget-profile.pat-widget-profile .profile-info-widget .booking-doc-img img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.widget-profile {
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.widget-profile .profile-info-widget {
+  display: block;
+  text-align: center;
+}
+.widget-profile .profile-info-widget .booking-doc-img {
+  display: inline-block;
+  margin: 0 0 15px;
+  width: auto;
+  padding: 8px;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+}
+.widget-profile .profile-info-widget .booking-doc-img img {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+}
+
+/*-----------------
+  Admin Sidebar
+------------------*/
+
+.sidebar {
+  background-color: #007780;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+  bottom: 0;
+  left: 0;
+  margin-top: 0;
+  position: fixed;
+  top: 60px;
+  transition: all 0.2s ease-in-out 0s;
+  width: 240px;
+  z-index: 1001;
+}
+.sidebar.opened {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.sidebar-inner {
+  height: 100%;
+  min-height: 100%;
+  transition: all 0.2s ease-in-out 0s;
+}
+.sidebar-menu {
+  padding: 15px;
+}
+.sidebar-menu ul {
+  font-size: 15px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.sidebar-menu li a {
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: auto;
+  padding: 0 20px;
+}
+.sidebar-menu li a:hover {
+  color: #5ae8ff;
+}
+.sidebar-menu > ul > li > a > i {
+  margin-right: 25px;
+}
+
+.sidebar-menu > ul > li > a:hover {
+  background-color: #007780;
+  color: #fff;
+}
+.sidebar-menu > ul > li.active > a:hover {
+  background-color: #626666;
+  color: #fff;
+}
+.sidebar-menu li.active a {
+  background-color: #007780;
+  color: #fff;
+}
+.menu-title {
+  color: #ebebeb;
+  display: flex;
+  font-size: 14px;
+  opacity: 1;
+  padding: 5px 15px;
+  white-space: nowrap;
+}
+.menu-title > i {
+  float: right;
+  line-height: 40px;
+}
+.sidebar-menu li.menu-title a {
+  color: #ff9b44;
+  display: inline-block;
+  margin-left: auto;
+  padding: 0;
+}
+.sidebar-menu li.menu-title a.btn {
+  color: #fff;
+  display: block;
+  float: none;
+  font-size: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+.sidebar-menu ul ul a.active {
+  color: #20e3ff;
+  text-decoration: underline;
+}
+.mobile_btn {
+  display: none;
+  float: left;
+}
+.sidebar .sidebar-menu > ul > li > a span {
+  transition: all 0.2s ease-in-out 0s;
+  display: inline-block;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+.sidebar .sidebar-menu > ul > li > a span.chat-user {
+  margin-left: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar .sidebar-menu > ul > li > a span.badge {
+  margin-left: auto;
+}
+.sidebar-menu ul ul a {
+  display: block;
+  font-size: 15px;
+  padding: 7px 10px 7px 45px;
+  position: relative;
+}
+.sidebar-menu ul ul {
+  display: none;
+}
+.sidebar-menu ul ul ul a {
+  padding-left: 65px;
+}
+.sidebar-menu ul ul ul ul a {
+  padding-left: 85px;
+}
+.sidebar-menu > ul > li {
+  margin-bottom: 3px;
+  position: relative;
+}
+.sidebar-menu > ul > li:last-child {
+  margin-bottom: 0;
+}
+.sidebar-menu > ul > li > a {
+  align-items: center;
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 5px;
+  position: relative;
+  transition: all 0.2s ease-in-out 0s;
+  color: #f1f1f1;
+}
+.sidebar-menu ul li a i {
+  display: inline-block;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: left;
+  vertical-align: middle;
+  width: 20px;
+  transition: all 0.2s ease-in-out 0s;
+}
+.sidebar-menu ul li.menu-title a i {
+  font-size: 16px !important;
+  margin-right: 0;
+  text-align: right;
+  width: auto;
+}
+.sidebar-menu li a > .badge {
+  color: #fff;
 }
