@@ -1,6 +1,5 @@
 import React from "react"
 import SettingsIcon from "@material-ui/icons/Settings"
-import { Link } from "react-router-dom"
 
 function HeaderAlerts(props) {
   return (

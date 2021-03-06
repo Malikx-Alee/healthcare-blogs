@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import UserHeader from "./Headers/UserHeader"
 import Header from "./Header"
 import Footer from "./Footer"
-import { propTypes } from "react-bootstrap/esm/Image"
 
 export default function Layout({
   children,
@@ -37,7 +36,7 @@ export default function Layout({
         <Link to={redirectTo ? `/${redirectTo}` : null}>
           <h2
             className={clsx("primary-color d-inline-block mb-2", {
-              "mt-5": user?.role != undefined ? true : false,
+              "mt-5": user?.role !== undefined ? true : false,
             })}
           >
             {title}

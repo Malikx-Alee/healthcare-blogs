@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import clsx from "clsx"
-import axios from "axios"
 import logo from "../../assets/img/logo.png"
 import { makeStyles } from "@material-ui/core/styles"
 import AppBar from "@material-ui/core/AppBar"
@@ -8,7 +7,6 @@ import Toolbar from "@material-ui/core/Toolbar"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
 import Avatar from "@material-ui/core/Avatar"
-import { useHistory } from "react-router-dom"
 import PatientSidebar from "../Sidebars/PatientSidebar"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
@@ -77,7 +75,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function HeaderMenuAppBar(props) {
-  let history = useHistory()
   const classes = useStyles()
   const [anchorEl, setAnchorEl] = React.useState(null)
   let [openAvatarMenu, setOpenAvatarMenu] = useState(false)
